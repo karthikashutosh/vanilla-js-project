@@ -14,9 +14,10 @@
            height: 10vh;
        }
        #btn-default{
-           border-radius: 1rem;
            height: 5vh;
            width:7%;
+           margin: 1rem;
+           font-weight: bolder;
        }
        #output-text{
            border: 2px solid black;
@@ -24,12 +25,17 @@
            height: 15vh;
            margin: 1rem;
        }
+       .emoji{
+           padding: 1rem;
+           font-weight: bolder;
+       }
     </style>
 </head>
 <body>
     <h1>Banana Talk</h1>
     <textarea id="input" placeholder="Enter your text here"></textarea>
-    <button id=btn-default>Clicked</button>
+    <button id=btn-default>Translate</button>
+    <div class="emoji">Output will Down here 👇</div>
     <div id="output-text"></div>
 
     <script src="./app.js" type="text/javascript"></script>
