@@ -1,7 +1,9 @@
 var clickButton = document.querySelector("#btn-default");
-function ClickHandler(){
-    console.log("clicked boy")
+var inputText = document.querySelector("#input");
+
+
+function clickHandler(){
+
 }
 
-clickButton.addEventListener("click",ClickHandler
-)
+clickButton.addEventListener("click",clickHandler)
