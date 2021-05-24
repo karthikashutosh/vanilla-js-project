@@ -2,15 +2,27 @@ var clickButton = document.querySelector("#btn-default");
 var inputText = document.querySelector("#input");
 var outputDiv = document.querySelector("#output");
 
-var url = https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json;
+var url ="https://api.funtranslations.com/translate/minion.json";
+
+function urlTranslation(input){  
+
+return url + "?" + "text=" + input;
+}
+
+
 
 function clickHandler() {
+   
+    var textInput = inputText.value;
 
-
-fetch(url)
-   .then(respnse => respnse.json)
-   .thenn(json => console.log(json))
-
+fetch(urlTranslation(textInput))
+   .then(res => res.json())
+   .then(json => {
+       var traslatedText = json.contents.translated;
+       outputDiv.innerText = traslatedText;
+   })
+   .catch(error => alert("something wrong ladies and gentleman please try again later")
+   )
 
 }
 
