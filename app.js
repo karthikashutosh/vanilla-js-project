@@ -1,9 +1,17 @@
 var clickButton = document.querySelector("#btn-default");
 var inputText = document.querySelector("#input");
-var outputText = document.querySelector("output-text");
+var outputDiv = document.querySelector("#output");
 
-function clickHandler() {}
+var url = https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json;
 
-outputText.innerHTML = inputText.value;
+function clickHandler() {
+
+
+fetch(url)
+   .then(respnse => respnse.json)
+   .thenn(json => console.log(json))
+
+
+}
 
 clickButton.addEventListener("click", clickHandler);
